@@ -1,132 +1,137 @@
-# Chris Titus Tech's Windows Utility
+> [!WARNING]
+> 该汉化正在制作中，请坐和放宽。
 
-[![Version](https://img.shields.io/github/v/release/ChrisTitusTech/winutil?color=7a39fb)](https://github.com/ChrisTitusTech/winutil/releases/latest)
+### **This is the Chinese Localization version of Winutil.<br>Original version see -> [ChrisTitusTech/winutil](https://github.com/ChrisTitusTech/winutil)**
 
-This utility is a compilation of Windows tasks I perform on each Windows system I use. It is meant to streamline *installs*, debloat with *tweaks*, troubleshoot with *config*, and fix Windows *updates*. I am extremely picky about any contributions to keep this project clean and efficient.
+# Chris Titus Tech 的 Windows 工具箱 - 汉化
+
+[![版本](https://img.shields.io/github/v/release/zetaloop/winutil?color=7a39fb)](https://github.com/zetaloop/winutil/releases/latest)
+
+这个工具箱综合了我（CTT）给每个新安装的 Windows 系统做的优化。它可以快速 *安装* 各类软件，*优化* 系统减少臃肿，解决 *配置* 问题，以及修复 Windows *更新*。该项目对各种贡献非常挑剔，以确保整洁高效。
 
 ![screen-install](screen-install.png)
 
-## Usage
+## 用法
 
-Winutil must be run in Admin mode because it performs system-wide tweaks. To achieve this, open PowerShell or Windows Terminal as an administrator. Here are a few ways to do it:
+为了执行系统级的优化，Winutil 需要以管理员模式运行，请以管理员身份打开 PowerShell 或终端。以下是几种方法：
 
-1. **Right-Click Method:**
-   - Right-click on the start menu.
-   - Choose "Windows PowerShell (Admin)" (for Windows 10) or "Terminal (Admin)" (for Windows 11).
+1. **右键方法：**
+   - 右键单击开始按钮。
+   - 选择 "Windows PowerShell (管理员)"（Win10）或 "终端 (管理员)"（Win11）.
 
-2. **Search and Launch Method:**
-   - Press the Windows key.
-   - Type "PowerShell" or "Terminal" (for Windows 11).
-   - Press `Ctrl + Shift + Enter` to launch it with administrator privileges.
+2. **搜索方法：**
+   - 按一下 Windows 徽标键。
+   - 输入 "PowerShell" 或 "终端"（Win11）。
+   - 按下 `Ctrl + Shift + Enter` 以管理员权限启动。
 
 
-### Launch Command
+### 启动命令
 
-#### Simple way
+#### 最简单的方法
 
 ```ps1
 irm "https://christitus.com/win" | iex
 ```
-Courtesy of the issue: [#144](/../../issues/144)
+参考该议题：[#144](https://github.com/ChrisTitusTech/winutil/issues/144)
 
-If this site is not reachable from your country, please try running it directly from GitHub.
+如果该网站在您的地区不可用，请直接从 GitHub 运行。
 ```ps1
-irm "https://github.com/ChrisTitusTech/winutil/releases/latest/download/winutil.ps1" | iex
+irm "https://github.com/zetaloop/winutil/releases/latest/download/winutil.ps1" | iex
 ```
 
-If you still have Issues, refer to [Known Issues](https://github.com/ChrisTitusTech/winutil/blob/main/KnownIssues.md).
+如果仍有问题，请参考 [已知问题（英文）](https://github.com/ChrisTitusTech/winutil/blob/main/KnownIssues.md)。
 
 
-#### Automation
+#### 自动化
 
-Some features are available through automation. This allows you to save your config file pass it to Winutil walk away and come back to a finished system. Here is how you can set it up currently with Winutil >24.01.15
+部分功能可以自动化执行。您可以保存一个配置文件，传给 Winutil 来执行。当您再次回来的时候，系统已完成优化。以下是是用 Winutil >24.01.15 自动化执行的方法：
 
-1. On the Install Tab, click "Get Installed", this will get all installed apps **supported by Winutil** on the system
+1. 在安装页面中，点击 "获取已安装列表"，获取系统上所有已经安装的 **支持 Winutil 管理的这部分** 软件。
   ![GetInstalled](/wiki/Get-Installed.png)
-2. Click on the Settings cog in the upper right corner and chose Export, chose file file and location, this will export the setting file.
+2. 点击右上角齿轮图标，点击 "导出设置"，选择保存位置，即可导出设置文件。
   ![SettingsExport](/wiki/Settings-Export.png)
-3. Copy this file to a USB or somewhere you can use after Windows installation.
-4. Use Microwin tab to create a custom Windows image.
-5. Install the Windows image.
-6. In the new Windows, Open PowerShell in the admin mode and run command to automatically apply tweaks and install apps from the config file.
+3. 把这个文件复制到 U 盘或别的 Windows 安装好后能访问的地方。
+4. 使用 Microwin 功能创建自定义 Windows 镜像。
+5. 安装这个 Windows 镜像。
+6. 在新的 Windows 系统中，以管理员身份启动 PowerShell，运行命令来自动执行优化与安装软件。
 ```
 iex "& { $(irm christitus.com/win) } -Config [path-to-your-config] -Run"
 ```
-7. Have a cup of coffee! Come back when it's done.
+7. 喝杯咖啡，稍等就好！
 
 
 
-## Support
-- To morally and mentally support the project, make sure to leave a ⭐️!
-- EXE Wrapper for $10 @ https://www.cttstore.com/windows-toolbox
+## 支持
+- 如果希望在道德和精神上支持这个项目，请务必留下一颗 ⭐️！[原项目传送门](https://github.com/ChrisTitusTech/winutil)
+- 也可以用 10 美元购买 EXE 打包版：https://www.cttstore.com/windows-toolbox
 
-## Tutorial
+## 教程（英文）
 
-[![Watch the video](https://img.youtube.com/vi/6UQZ5oQg8XA/hqdefault.jpg)](https://www.youtube.com/watch?v=6UQZ5oQg8XA)
+[![观看视频](https://img.youtube.com/vi/6UQZ5oQg8XA/hqdefault.jpg)](https://www.youtube.com/watch?v=6UQZ5oQg8XA)
 
-## Overview
+## 概览
 
-- Install
-  - Install Selection: Organize programs by category and facilitate installation by enabling users to select programs and initiate the installation process with a single click.
+- 安装
+  - 安装：软件已分门别类整理好，选中即可一键安装。
 
-  - Upgrade All: Upgrade all existing programs to their latest versions, ensuring users have the most up-to-date and feature-rich software.
+  - 全部更新：将所有现有软件更新到最新版本，确保用户拥有最新最好的软件。
 
-  - Uninstall Selection: Effortlessly uninstall selected programs, providing users with a streamlined way to remove unwanted software from their system.
+  - 卸载：一键卸载所选软件，轻松移除不需要的软件。
 
-  - Get Installed: Retrieve a comprehensive list of installed programs on the system, offering users visibility into the software currently installed on their computer.
+  - 获取已安装列表：查找系统上已安装的软件，刷新列表。
 
-  - Import / Export: Enable users to import or export the selection list of programs, allowing them to save their preferred program configurations or share them with others. This feature promotes convenience and flexibility in managing program selections across different systems.
+  - 导入/导出：导入和导出程序选择列表，备份配置或与他人分享。您可在不同系统之间灵活管理软件。
 
-- Tweaks
-  - Recommended Selection: Provides pre-defined templates tailored for desktop, laptop, and minimal configurations, allowing users to select recommended settings and optimizations specific to their system type.
+- 优化
+  - 推荐模式：为 PC、笔记本、轻量用户定制的优化模板，用户可以根据需求快速选择优化模式。
 
-  - Essential Tweaks: Offers a collection of essential tweaks aimed at improving system performance, privacy, and resource utilization. These tweaks include creating a system restore point, disabling telemetry, Wi-Fi Sense, setting services to manual, disabling location tracking, and HomeGroup, among others.
+  - 基本优化：一些优化系统性能、隐私收集和资源利用的基本调整。包括创建系统还原点、禁用遥测、Wi-fi 感知、将系统后台服务设为手动、禁用位置跟踪、家庭组等。
 
-  - Advanced Tweaks: Encompasses a range of various advanced power user tweaks to further optimize the system. These tweaks include removing OneDrive and Edge, disabling User Account Control (UAC), notification panel, among others.
+  - 高级优化：一些专业用户用于深度优化系统的选项。包括删除 OneDrive 和 Edge、禁用 UAC（用户账户控制）、通知面板等。
 
-  - Toggles: Adds easy to use, one click shortcuts for toggling dark mode, NumLock on startup, file extensions, sticky keys, among others.
+  - 快速开关：一键开关暗色模式、开机打开数字锁定键、显示文件扩展名、粘滞键等功能。
 
-  - Additional Tweaks: Introduces various other tweaks such as enabling dark mode, changing DNS settings, adding an Ultimate Performance mode, and creating shortcuts for WinUtil tools. These tweaks provide users with additional customization options to tailor their system to their preferences.
+  - 其他优化：一些其他调整，比如启用暗色模式、更改 DNS 设置、添加终极性能模式、创建 WinUtil 本工具的快捷方式，提供了额外的自定义选项。
 
-- Config
-  - Features: Allows users to easily install various essential components and features to enhance their Windows experience. These features include installing .NET Frameworks, enabling Hyper-V virtualization, enabling legacy media support for Windows Media Player and DirectPlay, enabling NFS (Network File System) for network file sharing, and enabling Windows Subsystem for Linux (WSL) for running Linux applications on Windows.
+- 配置
+  - 组件：管理 Windows 的各种必要组件和增强功能。包括安装 .NET 框架、启用 Hyper-V 虚拟化、启用包含 Windows 媒体播放器与 DirectPlay 的旧版媒体支持、启用 NFS（网络文件系统）来进行网络文件共享、启用 WSL（Windows 上的 Linux 子系统）来运行 Linux 环境。
 
-  - Fixes: Provides a range of helpful fixes to address common issues and improve system stability. This includes setting up autologon for seamless login experiences, resetting Windows updates to resolve update-related problems, performing a system corruption scan to detect and repair corrupted files, and resetting network settings to troubleshoot network connectivity issues.
+  - 修复：一些有用的修复功能，可用于解决常见问题和提高系统稳定性。包括设置自动登录、重置 Windows 更新来修复更新失败问题、执行系统损坏扫描来修复损坏的系统文件、重置网络设置来解决网络连接问题。
 
-  - Legacy Windows Panels: Includes access to legacy Windows panels from Windows 7, allowing users to access familiar and powerful tools. These panels include Control Panel for managing system settings, Network Connections for configuring network adapters and connections, Power Panel for adjusting power and sleep settings, Sound Settings for managing audio devices and settings, System Properties for viewing and modifying system information, and User Accounts for managing user profiles and account settings.
-
-
-- Updates:
-  - Default (Out of Box) Settings: Provides the default settings that come with Windows for updates.
-
-  - Security (Recommended) Settings: Offers recommended settings, including a slight delay of feature updates by 2 years and installation of security updates 4 days after release.
-
-  - Disable All Updates (Not Recommended!): Allows users to disable all Windows updates, but it's not recommended due to potential security risks.
+  - 旧版 Windows 面板：访问 Win7 的设置面板，找回那熟悉而强大的工具。包括管理系统设置的控制面板、管理网络适配器和连接的网络连接中心、调整电源和睡眠设置的电源选项、管理音频设备和设置的声音设置、查看和修改系统信息的系统属性、管理用户配置文件和账户设置的用户账户设置。
 
 
-Video and Written Article walkthrough @ <https://christitus.com/windows-tool/>
+- 更新:
+  - 默认（初始状态）设置：Windows 默认的更新设置。
 
-## Issues
+  - 安全（推荐）设置：推荐的更新设置，功能更新推迟 2 年，安全更新在发布 4 天后安装。
 
-If you encounter any challenges or problems with the script, I kindly request that you submit them via the "Issues" tab on the GitHub repository. By filling out the provided template, you can provide specific details about the issue, allowing me to promptly address any bugs or consider feature requests.
+  - 禁用一切更新（不推荐!）：禁用所有 Windows 更新，由于潜在的安全风险，不推荐这么做。
 
-## Contribute Code
 
-Pull Requests are now handled directly on the MAIN branch. This was done since we can now select specific releases to launch via releases in GitHub.
+概览视频和文章：https://christitus.com/windows-tool/
 
-If doing a code change and you can submit a PR to main branch, but I am very selective about these. Do not use a code formatter, massive amounts of line changes, and make multiple feature changes. EACH FEATURE CHANGE SHOULD BE IT'S OWN Pull Request!
+## 问题
 
-When creating pull requests, it is essential to thoroughly document all changes made. This includes documenting any additions made to the tweaks section and ensuring that corresponding undo measures are in place to remove the newly added tweaks if necessary. Failure to adhere to this format may result in denial of the pull request. Additionally, comprehensive documentation is required for all code changes. Any code lacking sufficient documentation may also be denied.
+如果您在使用该脚本时遇到任何问题，恳请您通过 [GitHub 的 Issues 功能（英文）](https://github.com/ChrisTitusTech/winutil/issues)来汇报。您可以在模板中填写问题的具体细节，这样我可以及时解决软件错误或考虑功能请求。
 
-By following these guidelines, we can maintain a high standard of quality and ensure that the codebase remains organized and well-documented.
+## 贡献代码
 
-NOTE: When creating a function please include "WPF" or "WinUtil" in the name so that it can be loaded into the runspace.
+现在拉取请求是直接在 main 分支中处理的，因为我们在 GitHub Release 中能够选择特定的版本。
 
-## Thanks to all Contributors
-Thanks a lot for spending your time helping Winutil grow. Thanks a lot! Keep rocking 🍻.
+如果您进行了改动，可以提交 PR 到 main 分支，但是注意我对代码十分挑剔。请勿使用格式化工具、进行大量行改动或一次做出多个功能改动。**每个功能改动都需要在单独的拉取请求中进行！**
 
-[![Contributors](https://contrib.rocks/image?repo=ChrisTitusTech/winutil)](https://github.com/ChrisTitusTech/winutil/graphs/contributors)
+创建拉取请求时，需要完整记录所做的所有改动。这包括记录任何新增的优化项，以及确保如果需要的话可以立即撤销该项优化。不遵守该格式可能导致拉取请求被拒绝。此外，所有代码更改都需要详尽的文档记录，缺乏文档的代码也可能被拒绝。
 
-## GitHub Stats
+通过遵守这些规定，我们可以保持代码质量，确保代码库有组织、有记录。
 
-![Alt](https://repobeats.axiom.co/api/embed/aad37eec9114c507f109d34ff8d38a59adc9503f.svg "Repobeats analytics image")
+注意：创建函数时，请在名称中包含 "WPF" 或 "WinUtil" 以便将其加载到运行空间中。
+
+## 感谢所有贡献者
+非常感谢您花费时间精力帮助 Winutil 成长，感激不尽！让我们继续努力 🍻。
+
+[![贡献者](https://contrib.rocks/image?repo=ChrisTitusTech/winutil)](https://github.com/ChrisTitusTech/winutil/graphs/contributors)
+
+## GitHub 统计（原项目）
+
+![Alt](https://repobeats.axiom.co/api/embed/aad37eec9114c507f109d34ff8d38a59adc9503f.svg "原项目的 Repobeats 分析图像")
