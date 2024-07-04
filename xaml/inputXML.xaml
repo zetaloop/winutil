@@ -739,17 +739,17 @@
                     </Grid.RowDefinitions>
                     {{InstallPanel_tweaks}}
                     <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="10">
-                        <Label Content="Recommended Selections:" FontSize="14" VerticalAlignment="Center"/>
-                        <Button Name="WPFstandard" Content=" Standard " Margin="1"/>
-                        <Button Name="WPFminimal" Content=" Minimal " Margin="1"/>
-                        <Button Name="WPFclear" Content=" Clear " Margin="1"/>
-                        <Button Name="WPFGetInstalledTweaks" Content=" Get Installed " Margin="1"/>
+                        <Label Content="推荐模式：" FontSize="14" VerticalAlignment="Center"/>
+                        <Button Name="WPFstandard" Content=" 标准优化模式 " Margin="1"/>
+                        <Button Name="WPFminimal" Content=" 少量优化模式 " Margin="1"/>
+                        <Button Name="WPFclear" Content=" 清空选择 " Margin="1"/>
+                        <Button Name="WPFGetInstalledTweaks" Content=" 刷新列表 " Margin="1"/>
                     </StackPanel>
                     <Border Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="0">
                         <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" HorizontalAlignment="Left">
                             <TextBlock Padding="10">
-                                Note: Hover over items to get a better description. Please be careful as many of these tweaks will heavily modify your system.
-                                <LineBreak/>Recommended selections are for normal users and if you are unsure do NOT check anything else!
+                                提示：将光标悬停在选项上可以查看详细描述。请小心操作，这里很多选项会对系统造成较大影响。
+                                <LineBreak/>普通用户请选择一个推荐模式。如果不是很确定，请不要操作其他选项。
                             </TextBlock>
                         </StackPanel>
                     </Border>
@@ -774,20 +774,20 @@
                     </Grid.ColumnDefinitions>
                     <Border Grid.Row="0" Grid.Column="0">
                         <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True">
-                            <Button Name="WPFUpdatesdefault" FontSize="16" Content="Default (Out of Box) Settings" Margin="20,4,20,10" Padding="10"/>
-                            <TextBlock Margin="20,0,20,0" Padding="10" TextWrapping="WrapWithOverflow" MaxWidth="300">This is the default settings that come with Windows. <LineBreak/><LineBreak/> No modifications are made and will remove any custom windows update settings.<LineBreak/><LineBreak/>Note: If you still encounter update errors, reset all updates in the config tab. That will restore ALL Microsoft Update Services from their servers and reinstall them to default settings.</TextBlock>
+                            <Button Name="WPFUpdatesdefault" FontSize="16" Content="默认更新（初始状态）" Margin="20,4,20,10" Padding="10"/>
+                            <TextBlock Margin="20,0,20,0" Padding="10" TextWrapping="WrapWithOverflow" MaxWidth="300">这是 Windows 默认的更新设置。<LineBreak/><LineBreak/>不包含任何改动，并且会删除所有自定义更新设置。<LineBreak/><LineBreak/>注意：如果更新依旧报错，请在 "配置" 页选择重置更新，这将会从微软的服务器恢复所有的更新服务并重置到默认设置。</TextBlock>
                         </StackPanel>
                     </Border>
                     <Border Grid.Row="0" Grid.Column="1">
                         <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True">
-                            <Button Name="WPFUpdatessecurity" FontSize="16" Content="Security (Recommended) Settings" Margin="20,4,20,10" Padding="10"/>
-                            <TextBlock Margin="20,0,20,0" Padding="10" TextWrapping="WrapWithOverflow" MaxWidth="300">This is my recommended setting I use on all computers.<LineBreak/><LineBreak/> It will delay feature updates by 2 years and will install security updates 4 days after release.<LineBreak/><LineBreak/>Feature Updates: Adds features and often bugs to systems when they are released. You want to delay these as long as possible.<LineBreak/><LineBreak/>Security Updates: Typically these are pressing security flaws that need to be patched quickly. You only want to delay these a couple of days just to see if they are safe and don't break other systems. You don't want to go without these for ANY extended periods of time.</TextBlock>
+                            <Button Name="WPFUpdatessecurity" FontSize="16" Content="安全更新（推荐）" Margin="20,4,20,10" Padding="10"/>
+                            <TextBlock Margin="20,0,20,0" Padding="10" TextWrapping="WrapWithOverflow" MaxWidth="300">这是我在自己电脑上用的推荐设置。<LineBreak/><LineBreak/>功能更新将会推迟 2 年，安全更新会在发布 4 天后自动安装。<LineBreak/><LineBreak/>功能更新：给系统增加新功能（通常更多地是新 bug）。一般来说，您会希望尽可能推迟这些更新。<LineBreak/><LineBreak/>安全更新：这些是需要及时安装的紧急安全漏洞修复。一般来说您会希望只推迟几天，看看这些修复会不会导致其他问题。请不要长时间不安装这类更新。</TextBlock>
                         </StackPanel>
                     </Border>
                     <Border Grid.Row="0" Grid.Column="2">
                         <StackPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True">
-                            <Button Name="WPFUpdatesdisable" FontSize="16" Content="Disable ALL Updates (NOT RECOMMENDED!)" Margin="20,4,20,10" Padding="10,10,10,10"/>
-                            <TextBlock Margin="20,0,20,0" Padding="10" TextWrapping="WrapWithOverflow" MaxWidth="300">This completely disables ALL Windows Updates and is NOT RECOMMENDED.<LineBreak/><LineBreak/> However, it can be suitable if you use your system for a select purpose and do not actively browse the internet. <LineBreak/><LineBreak/>Note: Your system will be easier to hack and infect without security updates.</TextBlock>
+                            <Button Name="WPFUpdatesdisable" FontSize="16" Content="禁用一切更新（不推荐!）" Margin="20,4,20,10" Padding="10,10,10,10"/>
+                            <TextBlock Margin="20,0,20,0" Padding="10" TextWrapping="WrapWithOverflow" MaxWidth="300">完全禁止所有 Windows 更新，不推荐这么做。<LineBreak/><LineBreak/>在特定情况下，如果您的系统仅用作专门目的，并且不常访问网络，禁用更新是合理的。<LineBreak/><LineBreak/>注意：如果不安装安全更新，您的系统将会容易被黑客攻击和被病毒感染。</TextBlock>
                             <TextBlock Text=" " Margin="20,0,20,0" Padding="10" TextWrapping="WrapWithOverflow" MaxWidth="300"/>
                         </StackPanel>
                         </Border>
@@ -809,13 +809,13 @@
                         HorizontalAlignment="Stretch">
                     <StackPanel Name="MicrowinMain" Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Column="0" Grid.Row="0">
                         <StackPanel Background="Transparent" SnapsToDevicePixels="True" Margin="1">
-                            <CheckBox x:Name="WPFMicrowinDownloadFromGitHub" Content="Download oscdimg.exe from CTT Github repo" IsChecked="False" Margin="1" />
+                            <CheckBox x:Name="WPFMicrowinDownloadFromGitHub" Content="从 CTT GitHub 下载 oscdimg.exe" IsChecked="False" Margin="1" ToolTip="不选的话会从 Chocolatey 下载" />
                             <TextBlock Margin="5" Padding="1" TextWrapping="Wrap" Foreground="{ComboBoxForegroundColor}">
-                                Choose a Windows ISO file that you've downloaded <LineBreak/>
-                                Check the status in the console
+                                选择您下载好的 Windows 安装镜像文件<LineBreak/>
+                                然后查看终端里的输出
                             </TextBlock>
-                            <CheckBox x:Name="WPFMicrowinISOScratchDir" Content="Use ISO directory for ScratchDir " IsChecked="False" Margin="1"
-                                ToolTip="Use ISO directory for ScratchDir " />
+                            <CheckBox x:Name="WPFMicrowinISOScratchDir" Content="将镜像文件目录用作临时目录" IsChecked="False" Margin="1"
+                                ToolTip="将镜像文件所在的文件夹作为保存临时数据的目录" />
                             <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" /> <!-- Takes the remaining space -->
@@ -825,7 +825,7 @@
                                         Text="Scratch"
                                         Margin="2"
                                         IsReadOnly="False"
-                                        ToolTip="Alt Path For Scratch Directory"
+                                        ToolTip="临时目录的路径"
                                         Grid.Column="0"
                                         VerticalAlignment="Center"
                                         Foreground="{LabelboxForegroundColor}">
@@ -840,7 +840,7 @@
                                 </Button>
                             </Grid>
                             <TextBox Name="MicrowinFinalIsoLocation" Background="Transparent" BorderBrush="{MainForegroundColor}"
-                                Text="ISO location will be printed here"
+                                Text="镜像文件的路径"
                                 Margin="2"
                                 IsReadOnly="True"
                                 TextWrapping="Wrap"
@@ -849,7 +849,7 @@
                             <Button Name="WPFGetIso" Margin="2" Padding="15">
                                 <Button.Content>
                                     <TextBlock Background="Transparent" Foreground="{ButtonForegroundColor}">
-                                        Select Windows <Underline>I</Underline>SO
+                                        选择 Windows 安装镜像(<Underline>I</Underline>)
                                     </TextBlock>
                                 </Button.Content>
                             </Button>
@@ -922,33 +922,33 @@
                                 Height = "Auto"
                                 Width = "Auto"
                                 Foreground="{ComboBoxForegroundColor}">
-                                <Bold>MicroWin features:</Bold><LineBreak/>
-                                - Remove Telemetry and Tracking <LineBreak/>
-                                - Add ability to use local accounts <LineBreak/>
-                                - Remove Wifi requirement to finish install <LineBreak/>
-                                - Ability to remove Edge <LineBreak/>
-                                - Ability to remove Defender <LineBreak/>
-                                - Remove Teams <LineBreak/>
-                                - Apps debloat <LineBreak/>
+                                <Bold>MicroWin 功能：</Bold><LineBreak/>
+                                - 移除遥测和跟踪<LineBreak/>
+                                - 添加创建本地账户的功能<LineBreak/>
+                                - 移除需要联网才能完成安装的限制<LineBreak/>
+                                - 可以移除 Edge<LineBreak/>
+                                - 可以移除 Defender<LineBreak/>
+                                - 移除 Teams<LineBreak/>
+                                - 精简软件<LineBreak/>
                                 <LineBreak/>
                                 <LineBreak/>
 
-                                <Bold>INSTRUCTIONS</Bold> <LineBreak/>
-                                - Download the latest Windows 11 image from Microsoft <LineBreak/>
-                                LINK: https://www.microsoft.com/software-download/windows11 <LineBreak/>
-                                May take several minutes to process the ISO depending on your machine and connection <LineBreak/>
-                                - Put it somewhere on the C:\ drive so it is easily accessible <LineBreak/>
-                                - Launch WinUtil and MicroWin  <LineBreak/>
-                                - Click on the "Select Windows ISO" button and wait for WinUtil to process the image <LineBreak/>
-                                It will be processed and unpacked which may take some time <LineBreak/>
-                                - Once complete, choose which Windows flavor you want to base your image on <LineBreak/>
-                                - Choose which features you want to keep <LineBreak/>
-                                - Click the "Start Process" button <LineBreak/>
-                                The process of creating the Windows image may take some time, please check the console and wait for it to say "Done" <LineBreak/>
-                                - Once complete, the target ISO file will be in the directory you have specified <LineBreak/>
-                                - Copy this image to your Ventoy USB Stick, boot to this image, gg
+                                <Bold>操作指南</Bold> <LineBreak/>
+                                - 从微软官网下载最新的 Windows 11 镜像<LineBreak/>
+                                链接：<Hyperlink NavigateUri="https://www.microsoft.com/software-download/windows11">https://www.microsoft.com/software-download/windows11</Hyperlink><LineBreak/>
+                                考虑到电脑配置和网络状况有所不同，获取镜像文件大概需要几分钟<LineBreak/>
+                                - 把文件放在 C 盘里，便于处理<LineBreak/>
+                                - 启动工具箱，进入 MicroWin 功能<LineBreak/>
+                                - 点击 "选择 Windows 安装镜像"，等待处理镜像文件<LineBreak/>
+                                镜像将被处理和解包，需要一点时间<LineBreak/>
+                                - 解包完成之后，选择您想要的 Windows 版本（比如家庭版、专业版之类）<LineBreak/>
+                                - 选择您希望保留的功能<LineBreak/>
+                                - 点击 "开始处理"<LineBreak/>
+                                创建新的 Windows 镜像可能需要不少时间，请查看终端，等待上面显示完成<LineBreak/>
+                                - 创建完成之后，新的镜像文件将会保存在您指定的目录里。<LineBreak/>
+                                - 将该镜像文件复制到您的 Ventoy U盘，启动此镜像，完事
                                 <LineBreak/>
-                                If you are injecting drivers ensure you put all your inf, sys, and dll files for each driver into a separate directory
+                                如果您需要注入驱动程序，请确保将每个驱动程序的 inf、sys、dll 文件一起放在单独的目录中，一个驱动程序放一个文件夹
                             </TextBlock>
                             <TextBlock Margin="15,0,15,15"
                                 Padding = "1"
@@ -959,7 +959,7 @@
                                 Foreground = "{ComboBoxForegroundColor}"
                                 xml:space = "preserve"
                             >
-<Bold>Example:</Bold>
+<Bold>例如：</Bold>
      C:\drivers\
           |-- Driver1\
           |   |-- Driver1.inf
@@ -967,7 +967,7 @@
           |-- Driver2\
           |   |-- Driver2.inf
           |   |-- Driver2.sys
-          |-- OtherFiles...
+          |-- 其他文件...
                                 </TextBlock>
                             </StackPanel>
                         </Border>
