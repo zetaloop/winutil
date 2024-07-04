@@ -492,11 +492,12 @@ $sync["AboutMenuItem"].Add_Click({
         Write-Debug "About clicked"
         $sync["SettingsPopup"].IsOpen = $false
         $authorInfo = @"
-Author   : <a href="https://github.com/ChrisTitusTech">@christitustech</a>
-Runspace : <a href="https://github.com/DeveloperDurp">@DeveloperDurp</a>
-MicroWin : <a href="https://github.com/KonTy">@KonTy</a>
-GitHub   : <a href="https://github.com/ChrisTitusTech/winutil">ChrisTitusTech/winutil</a>
-Version  : <a href="https://github.com/ChrisTitusTech/winutil/releases/tag/$($sync.version)">$($sync.version)</a>
+作者		: <a href="https://github.com/ChrisTitusTech">@christitustech</a>
+Runspace	: <a href="https://github.com/DeveloperDurp">@DeveloperDurp</a>
+MicroWin	: <a href="https://github.com/KonTy">@KonTy</a>
+GitHub		: <a href="https://github.com/ChrisTitusTech/winutil">ChrisTitusTech/winutil</a>
+汉化		: <a href="https://github.com/zetaloop/winutil">zetaloop/winutil</a>
+版本		: <a href="https://github.com/ChrisTitusTech/winutil/releases/tag/$($sync.version)">$($sync.version)</a>
 "@
         Show-CustomDialog -Message $authorInfo -Width 400
     })
