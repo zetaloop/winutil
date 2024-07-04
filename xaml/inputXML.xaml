@@ -599,7 +599,7 @@
                 Background="{ButtonInstallBackgroundColor}" Foreground="white" FontWeight="Bold" Name="WPFTab1BT">
                 <ToggleButton.Content>
                     <TextBlock Background="Transparent" Foreground="{ButtonInstallForegroundColor}" >
-                        <Underline>I</Underline>nstall
+                        安装(<Underline>I</Underline>)
                     </TextBlock>
                 </ToggleButton.Content>
             </ToggleButton>
@@ -607,7 +607,7 @@
                 Background="{ButtonTweaksBackgroundColor}" Foreground="{ButtonTweaksForegroundColor}" FontWeight="Bold" Name="WPFTab2BT">
                 <ToggleButton.Content>
                     <TextBlock Background="Transparent" Foreground="{ButtonTweaksForegroundColor}">
-                        <Underline>T</Underline>weaks
+                        优化(<Underline>T</Underline>)
                     </TextBlock>
                 </ToggleButton.Content>
             </ToggleButton>
@@ -615,7 +615,7 @@
                 Background="{ButtonConfigBackgroundColor}" Foreground="{ButtonConfigForegroundColor}" FontWeight="Bold" Name="WPFTab3BT">
                 <ToggleButton.Content>
                     <TextBlock Background="Transparent" Foreground="{ButtonConfigForegroundColor}">
-                        <Underline>C</Underline>onfig
+                        配置(<Underline>C</Underline>)
                     </TextBlock>
                 </ToggleButton.Content>
             </ToggleButton>
@@ -623,7 +623,7 @@
                 Background="{ButtonUpdatesBackgroundColor}" Foreground="{ButtonUpdatesForegroundColor}" FontWeight="Bold" Name="WPFTab4BT">
                 <ToggleButton.Content>
                     <TextBlock Background="Transparent" Foreground="{ButtonUpdatesForegroundColor}">
-                        <Underline>U</Underline>pdates
+                        更新(<Underline>U</Underline>)
                     </TextBlock>
                 </ToggleButton.Content>
             </ToggleButton>
