@@ -46,10 +46,10 @@ $sync.ProcessRunning = $false
 
 # If script isn't running as admin, show error message and quit
 If (([Security.Principal.WindowsIdentity]::GetCurrent()).Owner.Value -ne "S-1-5-32-544") {
-    Write-Host "===========================================" -Foregroundcolor Red
-    Write-Host "-- Scripts must be run as Administrator ---" -Foregroundcolor Red
-    Write-Host "-- Right-Click Start -> Terminal(Admin) ---" -Foregroundcolor Red
-    Write-Host "===========================================" -Foregroundcolor Red
+    Write-Host "==================================" -Foregroundcolor Red
+    Write-Host "--   脚本需要以管理员权限运行   --" -Foregroundcolor Red
+    Write-Host "-- 右键开始按钮 -> 终端(管理员) --" -Foregroundcolor Red
+    Write-Host "==================================" -Foregroundcolor Red
     # Try to restart script as admin
     $Console = "powershell"
     if (Test-Path "C:\Users\$env:username\AppData\Local\Microsoft\WindowsApps\wt.exe") {
@@ -60,5 +60,5 @@ If (([Security.Principal.WindowsIdentity]::GetCurrent()).Owner.Value -ne "S-1-5-
 }
 
 # Set PowerShell window title
-$Host.UI.RawUI.WindowTitle = $myInvocation.MyCommand.Definition + "(Admin)"
+$Host.UI.RawUI.WindowTitle = $myInvocation.MyCommand.Definition + "(管理员)"
 clear-host
