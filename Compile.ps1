@@ -43,7 +43,7 @@ Update-Progress "Adding: Header" 5
 $script_content.Add($header)
 
 Update-Progress "Adding: Version" 10
-$script_content.Add($(Get-Content .\scripts\start.ps1).replace('#{replaceme}',"$(Get-Date -Format yy.MM.dd)"))
+$script_content.Add($(Get-Content .\scripts\start.ps1 -Encoding UTF8).replace('#{replaceme}',"$(Get-Date -Format yy.MM.dd)"))
 
 Update-Progress "Adding: Functions" 20
 Get-ChildItem .\functions -Recurse -File | ForEach-Object {
@@ -131,7 +131,7 @@ else {
     Remove-Item ".\xaml\inputFeatures.xaml" -ErrorAction SilentlyContinue
 }
 
-Set-Content -Path $scriptname -Value ($script_content -join "`r`n") -Encoding ascii
+Set-Content -Path $scriptname -Value ($script_content -join "`r`n") -Encoding UTF8BOM
 Write-Progress -Activity "Compiling" -Completed
 
 if ($run){
