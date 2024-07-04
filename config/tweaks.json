@@ -1,8 +1,8 @@
 {
   "WPFTweaksAH": {
-    "Content": "Disable Activity History",
+    "Content": "禁用活动历史记录",
     "Description": "This erases recent docs, clipboard, and run history.",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -30,9 +30,9 @@
     ]
   },
   "WPFTweaksHiber": {
-    "Content": "Disable Hibernation",
+    "Content": "禁用休眠",
     "Description": "Hibernation is really meant for laptops as it saves what's in memory before turning the pc off. It really should never be used, but some people are lazy and rely on it. Don't be like Bob. Bob likes hibernation.",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -59,9 +59,9 @@
     ]
   },
   "WPFTweaksLaptopHibernation": {
-    "Content": "Set Hibernation as default (good for laptops)",
+    "Content": "将休眠设为默认（适合笔记本）",
     "Description": "Most modern laptops have connected stadby enabled which drains the battery, this sets hibernation as default which will not drain the battery. See issue https://github.com/ChrisTitusTech/winutil/issues/1399",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a014_",
     "registry": [
@@ -106,9 +106,9 @@
     ]
   },
   "WPFTweaksHome": {
-    "Content": "Disable Homegroup",
+    "Content": "禁用家庭组",
     "Description": "Disables HomeGroup - HomeGroup is a password-protected home networking service that lets you share your stuff with other PCs that are currently running and connected to your network.",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a005_",
     "service": [
@@ -125,9 +125,9 @@
     ]
   },
   "WPFTweaksLoc": {
-    "Content": "Disable Location Tracking",
+    "Content": "禁用位置跟踪",
     "Description": "Disables Location Tracking...DUH!",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -162,9 +162,9 @@
     ]
   },
   "WPFTweaksServices": {
-    "Content": "Set Services to Manual",
+    "Content": "将一些后台服务设为手动",
     "Description": "Turns a bunch of system services to manual that don't need to be running all the time. This is pretty harmless as if the service is needed, it will simply start on demand.",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a014_",
     "service": [
@@ -1581,9 +1581,9 @@
     ]
   },
   "WPFTweaksConsumerFeatures":{
-    "Content": "Disable ConsumerFeatures",
+    "Content": "禁用消费者组件 ConsumerFeatures",
     "Description": "Windows 10 will not automatically install any games, third-party apps, or application links from the Windows Store for the signed-in user. Some default Apps will be inaccessible (eg. Phone Link)",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a003_",
     "registry": [
@@ -1597,9 +1597,9 @@
     ]
   },
   "WPFTweaksTele": {
-    "Content": "Disable Telemetry",
+    "Content": "禁用遥测",
     "Description": "Disables Microsoft Telemetry. Note: This will lock many Edge Browser settings. Microsoft spies heavily on you when using the Edge browser.",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a003_",
     "ScheduledTask": [
@@ -1968,9 +1968,9 @@
     ]
   },
   "WPFTweaksWifi": {
-    "Content": "Disable Wifi-Sense",
+    "Content": "禁用 Wifi 感知",
     "Description": "Wifi Sense is a spying service that phones home all nearby scanned wifi networks and your current geo location.",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -1991,9 +1991,9 @@
     ]
   },
   "WPFTweaksUTC": {
-    "Content": "Set Time to UTC (Dual Boot)",
+    "Content": "将时区设为 UTC（适合双系统）",
     "Description": "Essential for computers that are dual booting. Fixes the time sync with Linux Systems.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a027_",
     "registry": [
@@ -2007,9 +2007,9 @@
     ]
   },
   "WPFTweaksDisplay": {
-    "Content": "Set Display for Performance",
+    "Content": "关闭桌面特效",
     "Description": "Sets the system preferences to performance. You can do this manually with sysdm.cpl as well.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a027_",
     "registry": [
@@ -2113,9 +2113,9 @@
     ]
   },
   "WPFTweaksDeBloat": {
-    "Content": "Remove ALL MS Store Apps - NOT RECOMMENDED",
+    "Content": "删除所有微软商店软件 - 不推荐",
     "Description": "USE WITH CAUTION!!!!! This will remove ALL Microsoft store apps other than the essentials to make winget work. Games installed by MS Store ARE INCLUDED!",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a028_",
     "appx": [
@@ -2232,9 +2232,9 @@
     ]
   },
   "WPFTweaksRestorePoint": {
-    "Content": "Create Restore Point",
+    "Content": "创建还原点",
     "Description": "Creates a restore point at runtime in case a revert is needed from WinUtil modifications",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Checked": "False",
     "Order": "a001_",
@@ -2288,9 +2288,9 @@
     ]
   },
   "WPFTweaksEndTaskOnTaskbar": {
-    "Content": "Enable End Task With Right Click",
+    "Content": "启用右键结束任务",
     "Description": "Enables option to end task when right clicking a program in the taskbar",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a006_",
     "InvokeScript": [
@@ -2305,9 +2305,9 @@
     ]
   },
   "WPFTweaksPowershell7": {
-    "Content": "Replace Default Powershell 5 to Powershell 7",
+    "Content": "将默认 Powershell 5 改成 Powershell 7",
     "Description": "This will edit the config file of the Windows Terminal Replacing the Powershell 5 to Powershell 7 and install Powershell 7 if necessary",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a009_",
     "InvokeScript": [
@@ -2318,9 +2318,9 @@
     ]
   },
   "WPFTweaksStorage": {
-    "Content": "Disable Storage Sense",
+    "Content": "禁用存储感知",
     "Description": "Storage Sense deletes temp files automatically.",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a005_",
     "InvokeScript": [
@@ -2331,9 +2331,9 @@
     ]
   },
   "WPFTweaksRemoveEdge": {
-    "Content": "Remove Microsoft Edge - NOT RECOMMENDED",
+    "Content": "删除微软 Edge 浏览器 - 不推荐",
     "Description": "Removes MS Edge when it gets reinstalled by updates. Credit: AveYo",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a029_",
     "InvokeScript": [
@@ -2351,9 +2351,9 @@
     ]
   },
   "WPFTweaksRemoveCopilot": {
-    "Content": "Disable Microsoft Copilot",
+    "Content": "禁用微软 Copilot 助手",
     "Description": "Disables MS Copilot AI built into Windows since 23H2.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a025_",
     "registry": [
@@ -2394,9 +2394,9 @@
     ]
   },
   "WPFTweaksDisableLMS1": {
-    "Content": "Disable Intel MM (vPro LMS)",
+    "Content": "禁用 Intel MM (vPro LMS)",
     "Description": "Intel LMS service is always listening on all ports and could be a huge security risk. There is no need to run LMS on home machines and even in the Enterprise there are better solutions.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a026_",
     "InvokeScript": [
@@ -2451,9 +2451,9 @@
     ]
   },
   "WPFTweaksRemoveOnedrive": {
-    "Content": "Remove OneDrive",
+    "Content": "删除 OneDrive",
     "Description": "Moves OneDrive files to Default Home Folders and Uninstalls it.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a030_",
     "InvokeScript": [
@@ -2547,9 +2547,9 @@
     ]
   },
   "WPFTweaksDisableNotifications": {
-    "Content": "Disable Notification Tray/Calendar",
+    "Content": "禁用通知中心和时间",
     "Description": "Disables all Notifications INCLUDING Calendar",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a026_",
     "registry": [
@@ -2570,9 +2570,9 @@
     ]
   },
   "WPFTweaksDebloatAdobe": {
-    "Content": "Adobe Debloat",
+    "Content": "精简 Adobe",
     "Description": "Manages Adobe Services, Adobe Desktop Service, and Acrobat Updates",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a021_",
     "InvokeScript": [
@@ -2718,9 +2718,9 @@
     ]
   },
   "WPFTweaksBlockAdobeNet": {
-    "Content": "Adobe Network Block",
+    "Content": "禁止 Adobe 访问网络",
     "Description": "Reduce user interruptions by selectively blocking connections to Adobe's activation and telemetry servers. Credit: Ruddernation-Designs",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a021_",
     "InvokeScript": [
@@ -2831,9 +2831,9 @@
     ]
   },
   "WPFTweaksRightClickMenu": {
-    "Content": "Set Classic Right-Click Menu ",
+    "Content": "恢复旧版右键菜单",
     "Description": "Great Windows 11 tweak to bring back good context menus when right clicking things in explorer.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a027_",
     "InvokeScript": [
@@ -2855,9 +2855,9 @@
     ]
   },
   "WPFTweaksDiskCleanup": {
-    "Content": "Run Disk Cleanup",
+    "Content": "运行磁盘清理",
     "Description": "Runs Disk Cleanup on Drive C: and removes old Windows Updates.",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a009_",
     "InvokeScript": [
@@ -2868,9 +2868,9 @@
     ]
   },
   "WPFTweaksDeleteTempFiles": {
-    "Content": "Delete Temporary Files",
+    "Content": "删除临时文件",
     "Description": "Erases TEMP Folders",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a002_",
     "InvokeScript": [
@@ -2879,9 +2879,9 @@
     ]
   },
   "WPFTweaksDVR": {
-    "Content": "Disable GameDVR",
+    "Content": "禁用 GameDVR",
     "Description": "GameDVR is a Windows App that is a dependency for some Store Games. I've never met someone that likes it, but it's there for the XBOX crowd.",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -2923,9 +2923,9 @@
     ]
   },
   "WPFTweaksTeredo": {
-    "Content": "Disable Teredo",
+    "Content": "禁用 Teredo",
     "Description": "Teredo network tunneling is a ipv6 feature that can cause additional latency.",
-    "category": "Essential Tweaks",
+    "category": "Essential Tweaks 基本优化",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -2945,9 +2945,9 @@
     ]
   },
   "WPFTweaksDisableipsix": {
-    "Content": "Disable IPv6",
+    "Content": "禁用 IPv6",
     "Description": "Disables IPv6.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a023_",
     "registry": [
@@ -2967,9 +2967,9 @@
     ]
   },
   "WPFTweaksDisableFSO": {
-    "Content": "Disable Fullscreen Optimizations",
+    "Content": "禁用全屏优化",
     "Description": "Disables FSO in all applications. NOTE: This will disable Color Management in Exclusive Fullscreen",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a024_",
     "registry": [
@@ -2983,155 +2983,155 @@
     ]
   },
   "WPFToggleDarkMode": {
-    "Content": "Dark Theme",
+    "Content": "暗色模式",
     "Description": "Enable/Disable Dark Mode.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a060_",
     "Type": "Toggle"
   },
   "WPFToggleBingSearch": {
-    "Content": "Bing Search in Start Menu",
+    "Content": "开始菜单的 Bing 搜索",
     "Description": "If enable then includes web search results from Bing in your Start Menu search.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a061_",
     "Type": "Toggle"
   },
   "WPFToggleNumLock": {
-    "Content": "NumLock on Startup",
+    "Content": "开机自动打开 NumLock 数字锁定键",
     "Description": "Toggle the Num Lock key state when your computer starts.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a062_",
     "Type": "Toggle"
   },
   "WPFToggleVerboseLogon": {
-    "Content": "Verbose Logon Messages",
+    "Content": "系统登录时显示详细信息",
     "Description": "Show detailed messages during the login process for troubleshooting and diagnostics.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a063_",
     "Type": "Toggle"
   },
   "WPFToggleShowExt": {
-    "Content": "Show File Extensions",
+    "Content": "显示文件扩展名",
     "Description": "If enabled then File extensions (e.g., .txt, .jpg) are visible.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a064_",
     "Type": "Toggle"
   },
   "WPFToggleSnapWindow": {
-    "Content": "Snap Window",
+    "Content": "窗口贴靠",
     "Description": "If enabled you can align windows by dragging them. | Relogin Required",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a065_",
     "Type": "Toggle"
   },
   "WPFToggleSnapFlyout": {
-    "Content": "Snap Assist Flyout",
+    "Content": "最大化按钮上的窗口贴靠弹窗",
     "Description": "If enabled then Snap preview is disabled when maximize button is hovered.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a066_",
     "Type": "Toggle"
   },
   "WPFToggleSnapSuggestion": {
-    "Content": "Snap Assist Suggestion",
+    "Content": "窗口贴靠建议",
     "Description": "If enabled then you will get suggestions to snap other applications in the left over spaces.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a067_",
     "Type": "Toggle"
   },
   "WPFToggleMouseAcceleration": {
-    "Content": "Mouse Acceleration",
+    "Content": "鼠标加速度",
     "Description": "If Enabled then Cursor movement is affected by the speed of your physical mouse movements.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a068_",
     "Type": "Toggle"
   },
   "WPFToggleStickyKeys": {
-    "Content": "Sticky Keys",
+    "Content": "粘滞键",
     "Description": "If Enabled then Sticky Keys is activated - Sticky keys is an accessibility feature of some graphical user interfaces which assists users who have physical disabilities or help users reduce repetitive strain injury.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a070_",
     "Type": "Toggle"
   },
   "WPFToggleTaskbarSearch": {
-    "Content": "Taskbar Search",
+    "Content": "任务栏搜索框",
     "Description": "If Enabled Search Button will be on the taskbar.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a068_",
     "Type": "Toggle"
   },
   "WPFOOSUbutton": {
-    "Content": "Run OO Shutup 10",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "Content": "打开 OO Shutup 10 工具",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a039_",
     "Type": "220"
   },
   "WPFToggleTaskbarWidgets": {
-    "Content": "Taskbar Widgets",
+    "Content": "任务栏小组件",
     "Description": "If Enabled then Widgets Icon in Taskbar will be shown.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a069_",
     "Type": "Toggle"
   },
   "WPFchangedns": {
     "Content": "DNS",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a040_",
     "Type": "Combobox",
-    "ComboItems": "Default DHCP Google Cloudflare Cloudflare_Malware Cloudflare_Malware_Adult Level3 Open_DNS Quad9"
+    "ComboItems": "默认 DHCP Google Cloudflare Cloudflare_Malware Cloudflare_Malware_Adult Level3 Open_DNS Quad9"
   },
   "WPFTweaksbutton": {
-    "Content": "Run Tweaks",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "Content": "执行优化",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a041_",
     "Type": "160"
   },
   "WPFUndoall": {
-    "Content": "Undo Selected Tweaks",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "Content": "撤回所选优化",
+    "category": "z__Advanced Tweaks 高级优化 - 务必小心",
     "panel": "1",
     "Order": "a042_",
     "Type": "160"
   },
   "WPFAddUltPerf": {
-    "Content": "Add and Activate Ultimate Performance Profile",
-    "category": "Performance Plans",
+    "Content": "添加并激活终极性能模式",
+    "category": "Performance Plans 电源计划",
     "panel": "2",
     "Order": "a080_",
     "Type": "300"
   },
   "WPFRemoveUltPerf": {
-    "Content": "Remove Ultimate Performance Profile",
-    "category": "Performance Plans",
+    "Content": "删除终极性能模式",
+    "category": "Performance Plans 电源计划",
     "panel": "2",
     "Order": "a081_",
     "Type": "300"
   },
   "WPFWinUtilShortcut": {
-    "Content": "Create WinUtil Shortcut",
-    "category": "Shortcuts",
+    "Content": "创建本工具的快捷方式",
+    "category": "Shortcuts 快捷方式",
     "panel": "2",
     "Order": "a082_",
     "Type": "300"
   },
   "WPFToggleTaskView": {
-    "Content": "Task View",
+    "Content": "任务视图按钮",
     "Description": "If Enabled then Task View Icon in Taskbar will be shown.",
-    "category": "Customize Preferences",
+    "category": "Customize Preferences 自定义设置",
     "panel": "2",
     "Order": "a069_",
     "Type": "Toggle"

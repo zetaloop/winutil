@@ -12,7 +12,7 @@ function Set-WinUtilDNS {
 
     #>
     param($DNSProvider)
-    if($DNSProvider -eq "Default"){return}
+    if($DNSProvider -eq "默认"){return}
     Try{
         $Adapters = Get-NetAdapter | Where-Object {$_.Status -eq "Up"}
         Write-Host "Ensuring DNS is set to $DNSProvider on the following interfaces"
