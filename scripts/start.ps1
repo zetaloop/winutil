@@ -52,8 +52,14 @@ If (([Security.Principal.WindowsIdentity]::GetCurrent()).Owner.Value -ne "S-1-5-
     Write-Host "-- Right-Click Start -> Terminal(Admin) ---" -Foregroundcolor Red
     Write-Host "===========================================" -Foregroundcolor Red
 
+    # Use Windows Terminal if available
+    $Console = "powershell"
+    if (Test-Path "C:\Users\$env:username\AppData\Local\Microsoft\WindowsApps\wt.exe") {
+        $Console = "wt powershell"
+    }
+
     # Try to restart script as admin
-    Start-Process -FilePath "cmd.exe" -ArgumentList "/c start $PSCommandPath" -Verb RunAs
+    Start-Process -FilePath "cmd.exe" -ArgumentList "/c start $Console $PSCommandPath" -Verb RunAs
     break
 }
 
