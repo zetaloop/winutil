@@ -69,7 +69,7 @@ function Invoke-WPFGetIso {
     [System.Reflection.Assembly]::LoadWithPartialName("System.windows.forms") | Out-Null
     $openFileDialog = New-Object System.Windows.Forms.OpenFileDialog
     $openFileDialog.initialDirectory = $initialDirectory
-    $openFileDialog.filter = "ISO files (*.iso)| *.iso"
+    $openFileDialog.filter = "ISO 文件 (*.iso)| *.iso"
     $openFileDialog.ShowDialog() | Out-Null
     $filePath = $openFileDialog.FileName
 

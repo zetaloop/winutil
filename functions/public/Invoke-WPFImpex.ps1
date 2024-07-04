@@ -28,7 +28,7 @@ function Invoke-WPFImpex {
 
     if (-not $Config){
         $FileBrowser.InitialDirectory = [Environment]::GetFolderPath('Desktop')
-        $FileBrowser.Filter = "JSON Files (*.json)|*.json"
+        $FileBrowser.Filter = "JSON 文件 (*.json)|*.json"
         $FileBrowser.ShowDialog() | Out-Null
 
         if($FileBrowser.FileName -eq ""){
