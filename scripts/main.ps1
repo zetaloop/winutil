@@ -273,7 +273,7 @@ $sync["Form"].Add_ContentRendered({
 "@
         }
 
-        foreach ($proc in (Get-Process).where{ $_.MainWindowTitle -and $_.MainWindowTitle -like "*titus*" }) {
+        foreach ($proc in (Get-Process).where{ $_.MainWindowTitle -and $_.MainWindowTitle -like "*CTT*" }) {
             # Check if the process's MainWindowHandle is valid
             if ($proc.MainWindowHandle -ne [System.IntPtr]::Zero) {
                 Write-Debug "MainWindowHandle: $($proc.Id) $($proc.MainWindowTitle) $($proc.MainWindowHandle)"
