@@ -165,7 +165,8 @@ function Get-OSInfo {
         # If 32-bit or 64-bit replace with x32 and x64
         if ($architecture -eq "32") {
             $architecture = "x32"
-        } elseif ($architecture -eq "64") {
+        }
+        elseif ($architecture -eq "64") {
             $architecture = "x64"
         }
 
@@ -176,9 +177,11 @@ function Get-OSInfo {
         # Reference: https://learn.microsoft.com/en-us/dotnet/api/microsoft.powershell.commands.producttype?view=powershellsdk-1.1.0
         if ($osDetails.ProductType -eq 1) {
             $typeValue = "Workstation"
-        } elseif ($osDetails.ProductType -eq 2 -or $osDetails.ProductType -eq 3) {
+        }
+        elseif ($osDetails.ProductType -eq 2 -or $osDetails.ProductType -eq 3) {
             $typeValue = "Server"
-        } else {
+        }
+        else {
             $typeValue = "Unknown"
         }
 
@@ -198,7 +201,8 @@ function Get-OSInfo {
         }
 
         return $result
-    } catch {
+    }
+    catch {
         Write-Error "Unable to get OS version details.`nError: $_"
         exit 1
     }
@@ -242,7 +246,8 @@ function Get-GitHubRelease {
             LatestVersion     = $latestVersion
             PublishedDateTime = $PublishedLocalDateTime
         }
-    } catch {
+    }
+    catch {
         Write-Error "Unable to check for updates.`nError: $_"
         exit 1
     }
@@ -268,7 +273,8 @@ function CheckForUpdate {
             Write-Output "Or you can run the following command to update:"
             Write-Output "Install-Script $PowerShellGalleryName -Force`n"
         }
-    } else {
+    }
+    else {
         Write-Output "`n$RepoName is up to date.`n"
         Write-Output "Current version: $CurrentVersion."
         Write-Output "Latest version: $($Data.LatestVersion)."
@@ -397,7 +403,8 @@ function Update-PathEnvironmentVariable {
         if (!$path.Contains($NewPath)) {
             if ($DebugMode) {
                 Write-Output "Adding $NewPath to PATH variable for $Level..."
-            } else {
+            }
+            else {
                 Write-Output "Adding PATH variable for $Level..."
             }
 
@@ -407,10 +414,12 @@ function Update-PathEnvironmentVariable {
 
             # Set the new PATH variable
             [Environment]::SetEnvironmentVariable("PATH", $path, $Level)
-        } else {
+        }
+        else {
             if ($DebugMode) {
                 Write-Output "$NewPath already present in PATH variable for $Level, skipping."
-            } else {
+            }
+            else {
                 Write-Output "PATH variable already present for $Level, skipping."
             }
         }
@@ -451,24 +460,29 @@ function Handle-Error {
     if ($ErrorRecord.Exception.Message -match '0x80073D06') {
         Write-Warning "Higher version already installed."
         Write-Warning "That's okay, continuing..."
-    } elseif ($ErrorRecord.Exception.Message -match '0x80073CF0') {
+    }
+    elseif ($ErrorRecord.Exception.Message -match '0x80073CF0') {
         Write-Warning "Same version already installed."
         Write-Warning "That's okay, continuing..."
-    } elseif ($ErrorRecord.Exception.Message -match '0x80073D02') {
+    }
+    elseif ($ErrorRecord.Exception.Message -match '0x80073D02') {
         # Stop execution and return the ErrorRecord so that the calling try/catch block throws the error
         Write-Warning "Resources modified are in-use. Try closing Windows Terminal / PowerShell / Command Prompt and try again."
         Write-Warning "If the problem persists, restart your computer."
         return $ErrorRecord
-    } elseif ($ErrorRecord.Exception.Message -match 'Unable to connect to the remote server') {
+    }
+    elseif ($ErrorRecord.Exception.Message -match 'Unable to connect to the remote server') {
         Write-Warning "Cannot connect to the Internet to download the required files."
         Write-Warning "Try running the script again and make sure you are connected to the Internet."
         Write-Warning "Sometimes the nuget.org server is down, so you may need to try again later."
         return $ErrorRecord
-    } elseif ($ErrorRecord.Exception.Message -match "The remote name could not be resolved") {
+    }
+    elseif ($ErrorRecord.Exception.Message -match "The remote name could not be resolved") {
         Write-Warning "Cannot connect to the Internet to download the required files."
         Write-Warning "Try running the script again and make sure you are connected to the Internet."
         Write-Warning "Make sure DNS is working correctly on your computer."
-    } else {
+    }
+    else {
         # For other errors, we should stop the execution and return the ErrorRecord so that the calling try/catch block throws the error
         return $ErrorRecord
     }
@@ -514,14 +528,16 @@ function Cleanup {
             if ($Recurse -and (Get-Item -Path $Path) -is [System.IO.DirectoryInfo]) {
                 Get-ChildItem -Path $Path -Recurse | Remove-Item -Force -Recurse
                 Remove-Item -Path $Path -Force -Recurse
-            } else {
+            }
+            else {
                 Remove-Item -Path $Path -Force
             }
         }
         if ($DebugMode) {
             Write-Output "Deleted: $Path"
         }
-    } catch {
+    }
+    catch {
         # Errors are ignored
     }
 }
@@ -604,7 +620,8 @@ function Install-Prerequisite {
         if (($osType -eq "Server" -and $osNumericVersion -eq 2022) -or ($osType -eq "Workstation" -and $osNumericVersion -eq 10)) {
             if ($osType -eq "Server") {
                 $osName = "Server 2022"
-            } else {
+            }
+            else {
                 $osName = "Windows 10"
             }
             $domain = Get-DomainFromUrl $AlternateUrl
@@ -632,7 +649,8 @@ function Install-Prerequisite {
         Write-Output "Installing ${arch} ${Name}..."
         Add-AppxPackage $url -ErrorAction Stop
         Write-Output "`n$Name installed successfully."
-    } catch {
+    }
+    catch {
         # Alternate method
         if ($_.Exception.Message -match '0x80073D02') {
             # If resources in use exception, fail immediately
@@ -646,7 +664,8 @@ function Install-Prerequisite {
             # Throw reason if alternate method is required
             if ($ThrowReason.Code -eq 0) {
                 Write-Warning "Error when trying to download or install $Name. Trying alternate method..."
-            } else {
+            }
+            else {
                 Write-Warning $ThrowReason.Message
             }
             Write-Output ""
@@ -726,7 +745,8 @@ function Install-Prerequisite {
                     Cleanup -Path $uiXaml.nupkgFolder -Recurse $true
                 }
             }
-        } catch {
+        }
+        catch {
             # If unable to connect to remote server and Windows 10 or Server 2022, display warning message
             $ShowOldVersionMessage = $False
             if ($_.Exception.Message -match "Unable to connect to the remote server") {
@@ -734,7 +754,8 @@ function Install-Prerequisite {
                 if ($osVersion.Type -eq "Workstation" -and $osVersion.NumericVersion -eq 10) {
                     $WindowsCaption = "Windows 10"
                     $ShowOldVersionMessage = $True
-                } elseif ($osVersion.Type -eq "Server" -and $osVersion.NumericVersion -eq 2022) {
+                }
+                elseif ($osVersion.Type -eq "Server" -and $osVersion.NumericVersion -eq 2022) {
                     $WindowsCaption = "Server 2022"
                     $ShowOldVersionMessage = $True
                 }
@@ -743,7 +764,8 @@ function Install-Prerequisite {
                 if ($ShowOldVersionMessage) {
                     $OldVersionMessage = "There is an issue connecting to the server to download $Name. Unfortunately this is a known issue with the prerequisite server URLs - sometimes they are down. Since you're using $WindowsCaption you must use the non-store versions of the prerequisites, the prerequisites from the Windows store will not work, so you may need to try again later or install manually."
                     Write-Warning $OldVersionMessage
-                } else {
+                }
+                else {
                     Write-Warning "Error when trying to download or install $Name. Please try again later or manually install $Name."
                 }
             }
@@ -864,7 +886,8 @@ try {
         # Add-AppxPackage will throw an error if the app is already installed or higher version installed, so we need to catch it and continue
         Add-AppxProvisionedPackage -Online -PackagePath $wingetPath -LicensePath $wingetLicensePath -ErrorAction SilentlyContinue | Out-Null
         Write-Output "`nwinget installed successfully."
-    } catch {
+    }
+    catch {
         $errorHandled = Handle-Error $_
         if ($null -ne $errorHandled) {
             throw $errorHandled
@@ -901,12 +924,14 @@ try {
     # Check if winget is installed
     if (Get-WingetStatus -eq $true) {
         Write-Output "winget is installed and working now, you can go ahead and use it."
-    } else {
+    }
+    else {
         Write-Warning "winget is installed but is not detected as a command. Try using winget now. If it doesn't work, wait about 1 minute and try again (it is sometimes delayed). Also try restarting your computer."
         Write-Warning "If you restart your computer and the command still isn't recognized, please read the Troubleshooting section`nof the README: https://github.com/asheroto/winget-install#troubleshooting`n"
         Write-Warning "Make sure you have the latest version of the script by running this command: $PowerShellGalleryName -CheckForUpdate"
     }
-} catch {
+}
+catch {
     # ============================================================================ #
     # Error handling
     # ============================================================================ #
