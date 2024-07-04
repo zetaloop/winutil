@@ -6,8 +6,8 @@ function Invoke-WPFFeatureInstall {
 
     #>
 
-    if($sync.ProcessRunning){
-        $msg = "[Invoke-WPFFeatureInstall] Install process is currently running."
+    if ($sync.ProcessRunning) {
+        $msg = "[Invoke-WPFFeatureInstall] 安装进程正在运行."
         [System.Windows.MessageBox]::Show($msg, "Winutil", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Warning)
         return
     }

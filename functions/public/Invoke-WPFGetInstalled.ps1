@@ -10,13 +10,13 @@ function Invoke-WPFGetInstalled {
     #>
     param($checkbox)
 
-    if($sync.ProcessRunning){
-        $msg = "[Invoke-WPFGetInstalled] Install process is currently running."
+    if ($sync.ProcessRunning) {
+        $msg = "[Invoke-WPFGetInstalled] 安装进程正在运行."
         [System.Windows.MessageBox]::Show($msg, "Winutil", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Warning)
         return
     }
 
-    if(((Test-WinUtilPackageManager -winget) -eq "not-installed") -and $checkbox -eq "winget"){
+    if (((Test-WinUtilPackageManager -winget) -eq "not-installed") -and $checkbox -eq "winget") {
         return
     }
 
@@ -25,22 +25,22 @@ function Invoke-WPFGetInstalled {
 
         $sync.ProcessRunning = $true
 
-        if($checkbox -eq "winget"){
-            Write-Host "Getting Installed Programs..."
+        if ($checkbox -eq "winget") {
+            Write-Host "正在获取已安装的软件..."
         }
-        if($checkbox -eq "tweaks"){
-            Write-Host "Getting Installed Tweaks..."
+        if ($checkbox -eq "tweaks") {
+            Write-Host "正在获取已安装的优化..."
         }
 
         $Checkboxes = Invoke-WinUtilCurrentSystem -CheckBox $checkbox
 
         $sync.form.Dispatcher.invoke({
-            foreach($checkbox in $Checkboxes){
-                $sync.$checkbox.ischecked = $True
-            }
-        })
+                foreach ($checkbox in $Checkboxes) {
+                    $sync.$checkbox.ischecked = $True
+                }
+            })
 
-        Write-Host "Done..."
+        Write-Host "完成..."
         $sync.ProcessRunning = $false
     }
 }
