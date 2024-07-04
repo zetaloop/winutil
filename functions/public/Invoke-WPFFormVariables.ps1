@@ -26,8 +26,8 @@ Function Invoke-WPFFormVariables {
     Write-Host "CCC::::::::::::C         T:::::::::T            T:::::::::T       "
     Write-Host "  CCCCCCCCCCCCC          TTTTTTTTTTT            TTTTTTTTTTT       "
     Write-Host ""
-    Write-Host "====Chris Titus Tech====="
-    Write-Host "=====Windows Toolbox====="
+    Write-Host "====Chris Titus Tech===="
+    Write-Host "=====Windows 工具箱====="
 
     #====DEBUG GUI Elements====
 
