@@ -856,28 +856,28 @@
                         </StackPanel>
                         <!-- Visibility="Hidden" -->
                         <StackPanel Name="MicrowinOptionsPanel" HorizontalAlignment="Left" SnapsToDevicePixels="True" Margin="1" Visibility="Hidden">
-                            <TextBlock Margin="6" Padding="1" TextWrapping="Wrap">Choose Windows SKU</TextBlock>
+                            <TextBlock Margin="6" Padding="1" TextWrapping="Wrap">选择 Windows 产品版本</TextBlock>
                             <ComboBox x:Name = "MicrowinWindowsFlavors" Margin="1" />
-                            <TextBlock Margin="6" Padding="1" TextWrapping="Wrap">Choose Windows features you want to remove from the ISO</TextBlock>
-                            <CheckBox Name="WPFMicrowinKeepProvisionedPackages" Content="Keep Provisioned Packages" Margin="5,0" ToolTip="Do not remove Microsoft Provisioned packages from the ISO."/>
-                            <CheckBox Name="WPFMicrowinKeepAppxPackages" Content="Keep Appx Packages" Margin="5,0" ToolTip="Do not remove Microsoft Appx packages from the ISO."/>
-                            <CheckBox Name="WPFMicrowinKeepDefender" Content="Keep Defender" Margin="5,0" IsChecked="True" ToolTip="Do not remove Microsoft Antivirus from the ISO."/>
-                            <CheckBox Name="WPFMicrowinKeepEdge" Content="Keep Edge" Margin="5,0" IsChecked="True" ToolTip="Do not remove Microsoft Edge from the ISO."/>
+                            <TextBlock Margin="6" Padding="1" TextWrapping="Wrap">选择要从镜像中移除的组件</TextBlock>
+                            <CheckBox Name="WPFMicrowinKeepProvisionedPackages" Content="保留预配包" Margin="5,0" ToolTip="不移除系统预配包。"/>
+                            <CheckBox Name="WPFMicrowinKeepAppxPackages" Content="保留 Appx 包" Margin="5,0" ToolTip="不移除微软的 UWP 软件（应用商店软件）。"/>
+                            <CheckBox Name="WPFMicrowinKeepDefender" Content="保留 Defender" Margin="5,0" IsChecked="True" ToolTip="不移除微软病毒防护。"/>
+                            <CheckBox Name="WPFMicrowinKeepEdge" Content="保留 Edge" Margin="5,0" IsChecked="True" ToolTip="不移除微软 Edge 浏览器。"/>
                             <Rectangle Fill="{MainForegroundColor}" Height="2" HorizontalAlignment="Stretch" Margin="0,10,0,10"/>
-                            <CheckBox Name="MicrowinInjectDrivers" Content="Inject drivers (I KNOW WHAT I'M DOING)" Margin="5,0" IsChecked="False" ToolTip="Path to unpacked drivers all sys and inf files for devices that need drivers"/>
+                            <CheckBox Name="MicrowinInjectDrivers" Content="注入驱动程序（危险操作）" Margin="5,0" IsChecked="False" ToolTip="请确保您知晓这会造成什么后果"/>
                             <TextBox Name="MicrowinDriverLocation" Background="Transparent" BorderThickness="1" BorderBrush="{MainForegroundColor}"
                                 Margin="6"
                                 Text=""
                                 IsReadOnly="False"
                                 TextWrapping="Wrap"
                                 Foreground="{LabelboxForegroundColor}"
-                                ToolTip="Path to unpacked drivers all sys and inf files for devices that need drivers"
+                                ToolTip="要注入的所有驱动 sys、inf 等文件的路径"
                             />
-                            <CheckBox Name="MicrowinImportDrivers" Content="Import drivers from current system" Margin="5,0" IsChecked="False" ToolTip="Export all third-party drivers from your system and inject them to the MicroWin image"/>
+                            <CheckBox Name="MicrowinImportDrivers" Content="从当前系统导入驱动" Margin="5,0" IsChecked="False" ToolTip="从当前系统中获取所有第三方驱动程序并注入到 Microwin 镜像"/>
                             <Rectangle Fill="{MainForegroundColor}" Height="2" HorizontalAlignment="Stretch" Margin="0,10,0,10"/>
-                            <CheckBox Name="WPFMicrowinCopyToUsb" Content="Copy to Ventoy" Margin="5,0" IsChecked="False" ToolTip="Copy to USB disk with a label Ventoy"/>
+                            <CheckBox Name="WPFMicrowinCopyToUsb" Content="复制到 Ventoy" Margin="5,0" IsChecked="False" ToolTip="复制到名称为 Ventoy 的 U 盘"/>
                             <Rectangle Fill="{MainForegroundColor}" Height="2" HorizontalAlignment="Stretch" Margin="0,10,0,10"/>
-                            <Button Name="WPFMicrowin" Content="Start the process" Margin="2" Padding="15"/>
+                            <Button Name="WPFMicrowin" Content="开始处理" Margin="2" Padding="15"/>
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Left" SnapsToDevicePixels="True" Margin="1" Visibility="Collapsed">
                             <TextBlock Name="MicrowinIsoDrive" VerticalAlignment="Center"  Margin="1" Padding="1" TextWrapping="WrapWithOverflow" Foreground="{ComboBoxForegroundColor}"/>

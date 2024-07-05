@@ -34,7 +34,7 @@ public class PowerManagement {
     # Ask the user where to save the file
     $SaveDialog = New-Object System.Windows.Forms.SaveFileDialog
     $SaveDialog.InitialDirectory = [Environment]::GetFolderPath('Desktop')
-    $SaveDialog.Filter = "ISO images (*.iso)|*.iso"
+    $SaveDialog.Filter = "ISO 文件 (*.iso)|*.iso"
     $SaveDialog.ShowDialog() | Out-Null
 
     if ($SaveDialog.FileName -eq "") {
